@@ -36,7 +36,7 @@ export async function GET() {
 
 export async function PATCH(request: Request) {
   try {
-    const cookieHeader = await buildCookieHeader(); // <-- await
+    const cookieHeader = await buildCookieHeader();
     const body = await request.json();
 
     const res = await api.patch('/users/me', body, {
